@@ -58,8 +58,19 @@ const rob = {
         return this.mass / (this.height * this.height);
     }
 }
-const dejon = [
-    {fullName:'Dejon Kurti', mass: 110, height: 1.95},
-]
+const dejon = {
+    fullName:'Dejon Kurti',
+    mass: 110,
+    height: 1.95,
+    getBMI: function(){
+        return this.mass / (this.height * this.height);
+    }
+}
 
-console.log(rob.getBMI());
+if(rob.getBMI() > dejon.getBMI()){
+    console.log(`Robs BMI is higher. It is ${rob.getBMI()}`);
+} else if(rob.getBMI() < dejon.getBMI()){
+    console.log(`Dejons BMI is higher. It is ${dejon.getBMI()}`);
+} else{
+    console.log(`It be a tie man ${rob.getBMI()}`);
+}
