@@ -50,7 +50,7 @@ Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and heig
 Rob's Info: mass: 78, height: 1.69
 Dejon's Info: mass: 110, height: 1.95 */
 
-const rob = {
+/* const rob = {
     fullName:'Robert Grande',
     mass: 78, 
     height: 1.69,
@@ -73,4 +73,32 @@ if(rob.getBMI() > dejon.getBMI()){
     console.log(`Dejons BMI is higher. It is ${dejon.getBMI()}`);
 } else{
     console.log(`It be a tie man ${rob.getBMI()}`);
+} */
+
+
+
+//Quiz #5
+const list = document.querySelectorAll('li');
+console.log(list);
+
+
+function filterplz(list){
+    return list = 'Flexbox Video';
 }
+
+const filterList = list.filter(filterplz(list));
+console.log(filterList);
+
+const filtered = document.querySelector(data-time);
+
+console.log(filtered);
+
+
+.map(timeCode => {
+    const parts = timeCode.split(':').seconds;
+    //console.log(parts); 
+    return parts;
+})
+
+
+//this was just really confusing
