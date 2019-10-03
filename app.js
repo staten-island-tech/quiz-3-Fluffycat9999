@@ -78,27 +78,34 @@ if(rob.getBMI() > dejon.getBMI()){
 
 
 //Quiz #5
-const list = document.querySelectorAll('li');
-console.log(list);
+const list = Array.from(document.querySelectorAll('ul>li'));
+//console.log(list);
 
+const filterList = list.filter(list => list.textContent == 'Flexbox Video')
+//console.log(filterList);
 
-function filterplz(list){
+/* function filterplz(list){
     return list = 'Flexbox Video';
 }
-
 const filterList = list.filter(filterplz(list));
 console.log(filterList);
 
 const filtered = document.querySelector(data-time);
 
-console.log(filtered);
+console.log(filtered); */
 
-
+.map(obj =>{return obj.dataset.time})
 .map(timeCode => {
-    const parts = timeCode.split(':').seconds;
+    const parts = timeCode.split(':');
     //console.log(parts); 
-    return parts;
+    return (parseInt(parts[0] * 60)) + parseInt(parts[1]);  ///parse changes the sting into a number
 })
+.reduce((acc,val) => { //reduce makes an array into one number
+    return acc + val;
+})
+console.log(filterList);
 
 
-//this was just really confusing
+const numbers = [3,62,234,7,23,74,23,76,92];
+let filtered = numbers.filter(e => e>70); 
+console.log(filtered);
